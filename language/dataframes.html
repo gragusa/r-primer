@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Working with Data Frames | R Primer</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.1.0">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    
+    <link rel="prev" href="../language/factors.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book" data-level="9" data-basepath=".." data-revision="1411984455491">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="Installing R/README.html">
+            
+                
+                    <a href="../Installing R/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Installing R
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="language/help.html">
+            
+                
+                    <a href="../language/help.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         The R help system
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="Installing R/Rstudio.html">
+            
+                
+                    <a href="../Installing R/Rstudio.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         R Studio
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="language/case.html">
+            
+                
+                    <a href="../language/case.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Important R commands
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="language/packages.html">
+            
+                
+                    <a href="../language/packages.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                         Packages
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6" data-path="language/README.html">
+            
+                
+                    <a href="../language/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                         The essential of the R Language
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7" data-path="language/vector.html">
+            
+                
+                    <a href="../language/vector.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                         Working with vectors and matrices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8" data-path="language/factors.html">
+            
+                
+                    <a href="../language/factors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                         Factors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="9" data-path="language/dataframes.html">
+            
+                
+                    <a href="../language/dataframes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                         Working with Data Frames
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >R Primer</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_7">
+                    
+                        <h3 id="data-frames">Data Frames</h3>
+<p>A <code>data.frame</code> can be thought as a matric contaning heterogeneous data:</p>
+<pre><code class="lang-r">df &lt;- data.frame(y = rnorm(<span class="hljs-number">20</span>), x = rnorm(<span class="hljs-number">20</span>), ind = factor(ifelse(runif(<span class="hljs-number">20</span>) &lt; <span class="hljs-number">.5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>), 
+                                                            labels = c(<span class="hljs-string">"Type A"</span>, <span class="hljs-string">"Type B"</span>)))
+head(df)
+</code></pre>
+<pre><code>##           y       x    ind
+## 1  0.288672 -0.5236 Type B
+## 2  0.001017  1.9043 Type A
+## 3  1.390849 -0.3713 Type B
+## 4  0.760043  1.0769 Type A
+## 5  2.031601 -0.5473 Type A
+## 6 -0.012709 -1.1051 Type A
+</code></pre><p>(The <code>head()</code> function output only the first few lines of an object.)</p>
+<p><code>data.frame</code> are read from disk and converted from other file types. </p>
+<pre><code class="lang-r"><span class="hljs-comment">## The foreing package allows reading package from other statistical software. </span>
+<span class="hljs-comment">## read.dta() read a dataset from Stata. </span>
+<span class="hljs-keyword">library</span>(foreign)
+ceosal &lt;- read.dta(<span class="hljs-string">'ceosal.dta'</span>)
+<span class="hljs-comment"># ceosal is a data.frame</span>
+class(ceosal)
+</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;
+</code></pre><p>A common format to exchange data is the <code>csv</code> format, which stands for Comma Separated Values. 
+<code>csv</code> file stores tabular data (numbers and text) in plain-text form. Plain text means that the file is a sequence of characters, with no data that has to be interpreted instead, as binary numbers. A <code>csv</code> file consists of any number of records, separated by line breaks of some kind; each record consists of fields, separated by <code>,</code>. </p>
+<p>A <code>csv</code> file looks like this  </p>
+<pre><code>pcsalary&quot;,&quot;sales&quot;,&quot;roe&quot;,&quot;pcroe&quot;,&quot;ros&quot;,&quot;indus&quot;,&quot;finance&quot;,&quot;consprod&quot;,&quot;utility&quot;,&quot;salary&quot;
+20,27595,14.1000099182129,106.400077819824,191,1,0,0,0,1095
+32,9958,10.9000101089478,-30.6000194549561,13,1,0,0,0,1001
+9,6125.90478515625,23.5,-16.3000106811523,14,1,0,0,0,1122
+-9,16246,5.90000486373901,-25.7000198364258,-21,1,0,0,0,578
+7,21783.220703125,13.800009727478,-3,56,1,0,0,0,1368
+5,6021.40478515625,20,1,55,1,0,0,0,1145
+10,2266.701171875,16.4000091552734,-5.90000486373901,62,1,0,0,0,1078
+</code></pre><p><code>csv</code> files are imported in <code>R</code> using the <code>read.csv</code> function. The basic usage of this function is</p>
+<pre><code class="lang-r">ceosal &lt;- read.csv(<span class="hljs-string">'ceosal.csv'</span>)
+</code></pre>
+<p>A <code>data.frame</code> stores variables and their <code>name</code>. To get the names of the variables stored in <code>ceosal</code> we use the <code>names</code> function</p>
+<pre><code class="lang-r">names(ceosal)
+</code></pre>
+<pre><code>##  [1] &quot;pcsalary&quot; &quot;sales&quot;    &quot;roe&quot;      &quot;pcroe&quot;    &quot;ros&quot;      &quot;indus&quot;   
+##  [7] &quot;finance&quot;  &quot;consprod&quot; &quot;utility&quot;  &quot;salary&quot;
+</code></pre><p>You can access individual variables by using <code>$</code>. To access the variable <code>roe</code>:</p>
+<pre><code class="lang-r">ceosal$roe
+</code></pre>
+<pre><code>##   [1] 14.1 10.9 23.5  5.9 13.8 20.0 16.4 16.3 10.5 26.3 25.9 26.8 14.8 22.3
+##  [15] 56.3 12.6 20.4  1.9 19.9 15.4 38.7 16.4 24.4 15.6 14.4 19.0 16.1 12.1
+##  [29] 16.2 18.4 14.2 14.9 12.4 17.1 16.9 18.1 10.9 19.3 18.3 18.4 13.8 13.7
+##  [43] 12.7 15.1 16.5 10.2 19.6 12.8 15.9 17.3  8.5 16.4 19.5 19.2 15.9 19.9
+##  [57] 28.1 25.0 15.0 12.6 20.3 22.7 14.8 13.2 10.3 17.7 10.0 15.6  6.8 12.4
+##  [71] 13.1 15.8 12.8 15.3  0.5 16.5 15.1 13.0 11.1  8.9 17.5 15.9 14.2  9.3
+##  [85]  9.5 15.5 14.4 11.1 15.9 16.4  8.6 24.6 15.4 16.9  7.2 11.6 26.4 21.4
+##  [99] 19.2 15.1  9.0  9.4 19.0  3.5 22.1 10.9 15.1 10.2 17.3 33.3 22.8 11.1
+## [113] 12.4 20.9  6.7  7.1 11.8 14.0 10.1  6.4 12.4 17.6 15.1 23.6 35.7 23.2
+## [127] 12.4 44.4  2.1 18.4 16.1 15.1 22.7 23.4 25.7 27.0 19.9 43.7 16.4 11.6
+## [141] 24.8 26.2 44.5 22.3 22.3 35.1 13.1 11.0 19.4 28.5 43.9 26.8 15.7 15.0
+## [155] 28.2 15.4 20.0 42.2 19.6 16.2 21.5 29.5 22.6 22.9 13.0  7.8 48.1 18.0
+## [169] 18.0 21.7 21.3 26.9 30.5 19.4 15.6 19.4 29.1 40.8 13.7 11.1 10.8  5.1
+## [183] 12.3  7.4  6.2 12.7 10.6  7.4 12.6 12.8  2.9 13.5 10.7 11.9 12.9 10.1
+## [197]  7.3 14.6 13.8  8.9 14.0 12.9 14.5 14.7  9.0 15.5 12.1 13.7 14.4
+</code></pre><p>The attach() function takes a &quot;database&quot; such as a list or data frame as its argument.
+Thus suppose lentils is a data frame with three variables lentils$u,  lentils$v$, lentils$w$. The attach</p>
+<pre><code class="lang-r"><span class="hljs-keyword">attach</span>(ceosal)
+</code></pre>
+<p>places the data frame in the search path at position 2, and provided there are no variables
+<code>roe</code>, <code>ros</code> or <code>salary</code> in position 1, <code>roe</code>, <code>ros</code> and <code>salary</code> are available as variables from the data frame in their own right. At this point an assignment such as</p>
+<pre><code class="lang-r">salary_euro &lt;- salary/<span class="hljs-number">1321</span>
+</code></pre>
+<p>The component <code>salary_euro</code> is not added to the original data.frame (<code>ceosal</code>), but rather masks it with another variable <code>salary_euro</code>. </p>
+<p>To make a permanent change to the data frame itself, the simplest way is to resort once again to the <code>$</code> notation:</p>
+<pre><code class="lang-r">ceosal$salary_euro &lt;- salary/<span class="hljs-number">1321</span>
+</code></pre>
+<p>However the new value of component <code>salary_euro</code> is not visible until the data frame is detached
+and attached again. To detach a data frame, use the function</p>
+<pre><code class="lang-r"><span class="hljs-keyword">detach</span>(ceosal)
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../language/factors.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Factors"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
