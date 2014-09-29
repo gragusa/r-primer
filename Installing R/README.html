@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Installing R | R Primer</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.1.0">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../language/help.html" />
+    
+    
+    <link rel="prev" href="../index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book" data-level="1" data-basepath=".." data-revision="1411983632027">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="1" data-path="Installing R/README.html">
+            
+                
+                    <a href="../Installing R/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Installing R
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="language/help.html">
+            
+                
+                    <a href="../language/help.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         The R help system
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="Installing R/Rstudio.html">
+            
+                
+                    <a href="../Installing R/Rstudio.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         R Studio
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="language/case.html">
+            
+                
+                    <a href="../language/case.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Important R commands
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="language/packages.html">
+            
+                
+                    <a href="../language/packages.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                         Packages
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6" data-path="language/README.html">
+            
+                
+                    <a href="../language/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                         The essential of the R Language
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7" data-path="language/vector.html">
+            
+                
+                    <a href="../language/vector.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                         Working with vectors and matrices
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8" data-path="language/factors.html">
+            
+                
+                    <a href="../language/factors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                         Factors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9" data-path="language/dataframes.html">
+            
+                
+                    <a href="../language/dataframes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                         Working with Data Frames
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >R Primer</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1">
+                    
+                        <h2 id="installing-r">Installing R</h2>
+<p><code>R</code> is installed in the computer labs here at Luiss. However, you should
+install a copy on your laptop or desktop. This will make it easier work on
+problem sets even if you are away from campus. </p>
+<p>The beauty of R is that it&#39;s open-source, which in practice it means that it is
+free to use. R can be downloaded from <a href="http://www.r-project.org" target="_blank">CRAN</a>, the Comprehensive R
+Archive Network.</p>
+<h3 id="installing-r-on-a-windows-computer">Installing R on a Windows computer</h3>
+<p>To install <code>R</code> on your Windows computer, follow these steps:</p>
+<ol>
+<li>Go to <a href="http://ftp.heanet.ie/mirrors/cran.r-project.org" target="_blank">http://ftp.heanet.ie/mirrors/cran.r-project.org</a>.</li>
+<li>Under “Download and Install R”, click on the “Windows” link.</li>
+<li>Under “Subdirectories”, click on the “base” link.</li>
+<li>On the next page, you should see a link saying something like “Download R
+3.11.1 for Windows” (or R X.X.X, where X.X.X gives the version of R). Click
+on this link.</li>
+<li>You may be asked if you want to save or run a file
+“<a href="http://cran.r-project.org/bin/windows/base/R-3.1.1-win.exe" target="_blank">R-3.1.1-win.exe</a>”. Choose
+“Save” and save the file on the Desktop. Then double-click on the icon for
+the file to run it.</li>
+<li>You will be asked what language to install it in - choose English.</li>
+<li>The R Setup Wizard will appear in a window. Click “Next” at the bottom of the R Setup wizard window.</li>
+<li>The next page says “Information” at the top. Click “Next” again.</li>
+<li>The next page says “Information” at the top. Click “Next” again.</li>
+<li>The next page says “Select Destination Location” at the top. By default, it will suggest to install R in “C:\Program Files” on your computer.</li>
+<li>Click “Next” at the bottom of the R Setup wizard window.</li>
+<li>The next page says “Select components” at the top. Click “Next” again.</li>
+<li>The next page says “Startup options” at the top. Click “Next” again.</li>
+<li>The next page says “Select start menu folder” at the top. Click “Next” again.</li>
+<li>The next page says “Select additional tasks” at the top. Click “Next” again.</li>
+<li>R should now be installed. This will take about a minute. When R has
+finished, you will see “Completing the R for Windows Setup Wizard”
+appear. Click “Finish”.</li>
+<li><p>To start R, you can either follow step A, or B:</p>
+<p>A. Check if there is an “R” icon on the desktop of the computer that you
+are using. If so, double-click on the “R” icon to start R. If you cannot
+find an “R” icon, try step B instead.</p>
+<p>B. Click on the “Start” button at the bottom left of your computer screen,
+and then choose “All programs”, and start R by selecting “R” (or R X.X.X,
+where X.X.X gives the version of R, eg. R 3.1.1) from the menu of programs.</p>
+</li>
+<li><p>The R console (a rectangle) should pop up.</p>
+</li>
+</ol>
+<h3 id="installing-r-on-a-mac-osx">Installing R on a MAC OSX</h3>
+<ol>
+<li>Go to <a href="http://cran.r-project.org/bin/macosx/" target="_blank">http://cran.r-project.org/bin/macosx/</a></li>
+<li>Choose and download the binary according to the OSX version installed on
+your MAC. There are two versions available, once for OSX 10.6 (Snow Leopard)
+and one for OSX 10.9 (Maverick). If you are unsure which is your OSX version
+read <a href="http://support.apple.com/kb/ht1633" target="_blank">here</a>.</li>
+<li>Click on the downloaded file </li>
+<li>Follow the instructions</li>
+</ol>
+<h3 id="installing-r-on-linux">Installing R on Linux</h3>
+<h4 id="ubuntu">Ubuntu</h4>
+<p>For detailed instructions can be found <a href="http://cran.r-project.org/bin/linux/ubuntu/README" target="_blank">here</a>.</p>
+<h3 id="running-r">Running R</h3>
+<p>To run R, just click on the R icon. (On a MAC you can also invoke <code>R</code> from the terminal.) The first thing you see is the version number of R and the date of your
+version. It is a good idea to visit the CRAN site regularly to make sure that you have got
+the most up-to-date version of R. If you have an old version, it is best to uninstall your
+current version before downloading the new one</p>
+<p>Below the header you will see a blank line with a &gt; symbol in the left hand margin. This
+is called the prompt and is R’s way of saying ‘What now?’. This is where you type in your
+commands. </p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../language/help.html" class="navigation navigation-next " aria-label="Next page: The R help system"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
